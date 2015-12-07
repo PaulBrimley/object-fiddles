@@ -228,8 +228,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
  which logs 'hello' to the console. */
 
   //Code Here
-methodCollection.alertHello = function() {alert('Hello');};
-methodCollection.logHello = function() {console.log('Hello')};
+methodCollection.alertHello = function() {alert('hello');};
+methodCollection.logHello = function() {console.log('hello')};
 
 //Now call your alertHello and logHello methods.
 
@@ -245,7 +245,13 @@ methodCollection.logHello();
 
   //Code Here
 
-
+function MakePerson(name, birthday, ssn) {
+  var newObj = {};
+  newObj.name = name;
+  newObj.birthday = birthday;
+  newObj.ssn = ssn;
+  return newObj;
+}
 
 //NEXT PROBLEM
 
@@ -254,7 +260,14 @@ methodCollection.logHello();
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
+function MakeCard(name, cardNum, securityCode) {
+  var newCreditCard = {};
+  newCreditCard.name = name;
+  newCreditCard.cardNum = cardNum;
+  newCreditCard.securityCode = securityCode;
+  return newCreditCard;
+
+} 
   
   
 //NEXT PROBLEM
@@ -267,5 +280,16 @@ methodCollection.logHello();
 */
 
   //Code Here
+
+function bindCard(person, creditcard) {
+  var fullInfo = {};
+  for (var i in person) {
+    fullInfo[i] = person[i];
+  }
+  for (var j in creditcard) {
+    fullInfo[j] = creditcard[j];
+  }
+  return fullInfo;
+}
 
 
